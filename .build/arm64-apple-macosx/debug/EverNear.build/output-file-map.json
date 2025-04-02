@@ -1,0 +1,143 @@
+{
+  "": {
+    "swift-dependencies": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/master.swiftdeps"
+  },
+  "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/AppDelegate.swift": {
+    "dependencies": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/AppDelegate.d",
+    "object": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/AppDelegate.swift.o",
+    "swiftmodule": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/AppDelegate~partial.swiftmodule",
+    "swift-dependencies": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/AppDelegate.swiftdeps"
+  },
+  "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Config/AIConfig.swift": {
+    "dependencies": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/AIConfig.d",
+    "object": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/AIConfig.swift.o",
+    "swiftmodule": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/AIConfig~partial.swiftmodule",
+    "swift-dependencies": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/AIConfig.swiftdeps"
+  },
+  "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Controllers/AICompanionViewController.swift": {
+    "dependencies": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/AICompanionViewController.d",
+    "object": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/AICompanionViewController.swift.o",
+    "swiftmodule": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/AICompanionViewController~partial.swiftmodule",
+    "swift-dependencies": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/AICompanionViewController.swiftdeps"
+  },
+  "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Controllers/AppLockViewController.swift": {
+    "dependencies": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/AppLockViewController.d",
+    "object": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/AppLockViewController.swift.o",
+    "swiftmodule": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/AppLockViewController~partial.swiftmodule",
+    "swift-dependencies": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/AppLockViewController.swiftdeps"
+  },
+  "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Controllers/CompanionViewController.swift": {
+    "dependencies": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/CompanionViewController.d",
+    "object": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/CompanionViewController.swift.o",
+    "swiftmodule": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/CompanionViewController~partial.swiftmodule",
+    "swift-dependencies": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/CompanionViewController.swiftdeps"
+  },
+  "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Controllers/CreateMemoryViewController.swift": {
+    "dependencies": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/CreateMemoryViewController.d",
+    "object": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/CreateMemoryViewController.swift.o",
+    "swiftmodule": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/CreateMemoryViewController~partial.swiftmodule",
+    "swift-dependencies": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/CreateMemoryViewController.swiftdeps"
+  },
+  "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Controllers/HomeViewController.swift": {
+    "dependencies": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/HomeViewController.d",
+    "object": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/HomeViewController.swift.o",
+    "swiftmodule": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/HomeViewController~partial.swiftmodule",
+    "swift-dependencies": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/HomeViewController.swiftdeps"
+  },
+  "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Controllers/MemoriesViewController.swift": {
+    "dependencies": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/MemoriesViewController.d",
+    "object": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/MemoriesViewController.swift.o",
+    "swiftmodule": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/MemoriesViewController~partial.swiftmodule",
+    "swift-dependencies": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/MemoriesViewController.swiftdeps"
+  },
+  "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Controllers/MoreViewController.swift": {
+    "dependencies": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/MoreViewController.d",
+    "object": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/MoreViewController.swift.o",
+    "swiftmodule": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/MoreViewController~partial.swiftmodule",
+    "swift-dependencies": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/MoreViewController.swiftdeps"
+  },
+  "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Controllers/OnboardingViewController.swift": {
+    "dependencies": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/OnboardingViewController.d",
+    "object": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/OnboardingViewController.swift.o",
+    "swiftmodule": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/OnboardingViewController~partial.swiftmodule",
+    "swift-dependencies": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/OnboardingViewController.swiftdeps"
+  },
+  "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Controllers/PrivacySettingsViewController.swift": {
+    "dependencies": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/PrivacySettingsViewController.d",
+    "object": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/PrivacySettingsViewController.swift.o",
+    "swiftmodule": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/PrivacySettingsViewController~partial.swiftmodule",
+    "swift-dependencies": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/PrivacySettingsViewController.swiftdeps"
+  },
+  "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Helpers/PrivacyManager.swift": {
+    "dependencies": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/PrivacyManager.d",
+    "object": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/PrivacyManager.swift.o",
+    "swiftmodule": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/PrivacyManager~partial.swiftmodule",
+    "swift-dependencies": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/PrivacyManager.swiftdeps"
+  },
+  "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Helpers/SecurityManager.swift": {
+    "dependencies": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/SecurityManager.d",
+    "object": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/SecurityManager.swift.o",
+    "swiftmodule": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/SecurityManager~partial.swiftmodule",
+    "swift-dependencies": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/SecurityManager.swiftdeps"
+  },
+  "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Models/AIService.swift": {
+    "dependencies": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/AIService.d",
+    "object": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/AIService.swift.o",
+    "swiftmodule": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/AIService~partial.swiftmodule",
+    "swift-dependencies": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/AIService.swiftdeps"
+  },
+  "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Models/CompanionService.swift": {
+    "dependencies": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/CompanionService.d",
+    "object": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/CompanionService.swift.o",
+    "swiftmodule": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/CompanionService~partial.swiftmodule",
+    "swift-dependencies": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/CompanionService.swiftdeps"
+  },
+  "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Models/DataManager.swift": {
+    "dependencies": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/DataManager.d",
+    "object": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/DataManager.swift.o",
+    "swiftmodule": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/DataManager~partial.swiftmodule",
+    "swift-dependencies": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/DataManager.swiftdeps"
+  },
+  "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Models/DataModels.swift": {
+    "dependencies": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/DataModels.d",
+    "object": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/DataModels.swift.o",
+    "swiftmodule": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/DataModels~partial.swiftmodule",
+    "swift-dependencies": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/DataModels.swiftdeps"
+  },
+  "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Models/EmotionalAnalysis.swift": {
+    "dependencies": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/EmotionalAnalysis.d",
+    "object": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/EmotionalAnalysis.swift.o",
+    "swiftmodule": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/EmotionalAnalysis~partial.swiftmodule",
+    "swift-dependencies": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/EmotionalAnalysis.swiftdeps"
+  },
+  "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Models/EmotionalResponseAnalyzer.swift": {
+    "dependencies": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/EmotionalResponseAnalyzer.d",
+    "object": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/EmotionalResponseAnalyzer.swift.o",
+    "swiftmodule": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/EmotionalResponseAnalyzer~partial.swiftmodule",
+    "swift-dependencies": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/EmotionalResponseAnalyzer.swiftdeps"
+  },
+  "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Models/MemoryResponseGenerator.swift": {
+    "dependencies": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/MemoryResponseGenerator.d",
+    "object": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/MemoryResponseGenerator.swift.o",
+    "swiftmodule": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/MemoryResponseGenerator~partial.swiftmodule",
+    "swift-dependencies": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/MemoryResponseGenerator.swiftdeps"
+  },
+  "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Models/MemoryService.swift": {
+    "dependencies": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/MemoryService.d",
+    "object": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/MemoryService.swift.o",
+    "swiftmodule": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/MemoryService~partial.swiftmodule",
+    "swift-dependencies": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/MemoryService.swiftdeps"
+  },
+  "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Models/MockAIService.swift": {
+    "dependencies": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/MockAIService.d",
+    "object": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/MockAIService.swift.o",
+    "swiftmodule": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/MockAIService~partial.swiftmodule",
+    "swift-dependencies": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/MockAIService.swiftdeps"
+  },
+  "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/SceneDelegate.swift": {
+    "dependencies": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/SceneDelegate.d",
+    "object": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/SceneDelegate.swift.o",
+    "swiftmodule": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/SceneDelegate~partial.swiftmodule",
+    "swift-dependencies": "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/SceneDelegate.swiftdeps"
+  }
+}

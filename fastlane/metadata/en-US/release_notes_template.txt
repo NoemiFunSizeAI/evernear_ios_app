@@ -1,0 +1,16 @@
+What's New in {VERSION}:
+
+🌟 New Features
+{FEATURES}
+
+🔧 Improvements
+{IMPROVEMENTS}
+
+🎤 Voice Interaction
+{VOICE_CHANGES}
+
+Thank you for using EverNear! 💜 Your journey of healing and remembrance matters to us.
+
+For support or feedback:
+• Email: support@evernear.com
+• In-app: Settings > Help & Support

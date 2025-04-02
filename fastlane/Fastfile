@@ -1,0 +1,445 @@
+# Import custom actions
+import_from_git(
+  url: "https://github.com/fastlane/fastlane-actions.git",
+  branch: "master"
+)
+
+default_platform(:ios)
+
+# Environment configurations
+ENVIRONMENTS = {
+  dev: {
+    app_identifier: "com.evernear.app.dev",
+    scheme: "EverNear-Dev",
+    configuration: "Debug",
+    voice_config: "VoiceConfig-Dev"
+  },
+  staging: {
+    app_identifier: "com.evernear.app.staging",
+    scheme: "EverNear-Staging",
+    configuration: "Release",
+    voice_config: "VoiceConfig-Staging"
+  },
+  prod: {
+    app_identifier: "com.evernear.app",
+    scheme: "EverNear",
+    configuration: "Release",
+    voice_config: "VoiceConfig-Prod"
+  }
+}
+
+platform :ios do
+  # Before all actions
+  before_all do |lane|
+    # Verify environment
+    env = lane_context[SharedValues::ENVIRONMENT]
+    unless ENVIRONMENTS.key?(env)
+      UI.user_error!("Invalid environment: #{env}. Must be one of: #{ENVIRONMENTS.keys.join(', ')}")
+    end
+    
+    # Set up environment-specific configuration
+    @config = ENVIRONMENTS[env]
+    
+    # Update app identifier
+    update_app_identifier(
+      app_identifier: @config[:app_identifier],
+      xcodeproj: "EverNear.xcodeproj"
+    )
+    
+    # Configure voice settings
+    setup_voice_environment(env)
+  end
+  desc "Sync certificates"
+  lane :sync_certificates do
+    match(
+      type: "appstore",
+      readonly: is_ci,
+      app_identifier: ["com.evernear.app"]
+    )
+  end
+
+  desc "Run tests"
+  lane :test do
+    run_tests(
+      scheme: "EverNear",
+      devices: ["iPhone 14 Pro"],
+      test_without_building: false,
+      code_coverage: true
+    )
+  end
+
+  # Development deployment
+  desc "Deploy to development environment"
+  lane :deploy_dev do |options|
+    deploy(env: :dev, configuration: "Debug")
+  end
+
+  # Staging deployment
+  desc "Deploy to staging environment"
+  lane :deploy_staging do |options|
+    deploy(env: :staging, configuration: "Release")
+  end
+
+  # Release automation
+  desc "Start new release"
+  lane :start_release do |options|
+    # Ensure we're on main
+    ensure_git_branch(branch: 'main')
+    ensure_git_status_clean
+    
+    # Get release type
+    type = UI.select("Select release type:", ["major", "minor", "patch", "hotfix"])
+    
+    # Prepare release
+    sh("swift Scripts/release_manager.swift #{type}")
+    
+    # Run tests
+    run_tests_for_env(:staging)
+    
+    # Deploy to staging
+    deploy(env: :staging, configuration: "Release")
+    
+    # Notify team
+    slack(
+      message: "🚀 New release prepared and deployed to staging",
+      success: true,
+      channel: "#releases"
+    )
+  end
+
+  desc "Finish release"
+  lane :finish_release do |options|
+    # Ensure we're on a release branch
+    ensure_git_branch(branch: /^release\/\d+\.\d+\.\d+$/)
+    ensure_git_status_clean
+    
+    # Get version from branch name
+    version = git_branch.split('/').last
+    
+    # Merge to main
+    sh("git checkout main")
+    sh("git merge --no-ff release/#{version} -m 'chore: Release #{version}'")
+    
+    # Create tag
+    add_git_tag(
+      tag: "v#{version}",
+      message: "Release #{version}"
+    )
+    
+    # Deploy to production
+    deploy(env: :prod, configuration: "Release")
+    
+    # Update develop
+    sh("git checkout develop")
+    sh("git merge --no-ff main -m 'chore: Sync develop with main'")
+    
+    # Delete release branch
+    sh("git branch -d release/#{version}")
+    
+    # Push everything
+    push_to_git_remote(tags: true)
+    
+    # Notify team
+    slack(
+      message: "🎉 Version #{version} has been released!",
+      success: true,
+      channel: "#releases"
+    )
+  end
+
+  desc "Hotfix release"
+  lane :hotfix do |options|
+    # Ensure we're on main
+    ensure_git_branch(branch: 'main')
+    ensure_git_status_clean
+    
+    # Prepare hotfix
+    sh("swift Scripts/release_manager.swift hotfix")
+    
+    # Run critical tests
+    run_tests(
+      scheme: ENVIRONMENTS[:prod][:scheme],
+      only_testing: ["CriticalTests", "VoiceTests"]
+    )
+    
+    # Quick staging deployment
+    deploy(env: :staging, configuration: "Release")
+    
+    # Wait for QA approval
+    UI.important("Hotfix deployed to staging. Waiting for QA approval...")
+    UI.input("Press Enter after QA approval")
+    
+    # Deploy to production
+    deploy(env: :prod, configuration: "Release")
+    
+    # Notify team
+    slack(
+      message: "🚨 Hotfix deployed to production",
+      success: true,
+      channel: "#releases"
+    )
+  end
+
+  # Production deployment
+  desc "Deploy to production"
+  lane :deploy_prod do |options|
+    ensure_git_branch(branch: 'main')
+    ensure_git_status_clean
+    deploy(env: :prod, configuration: "Release")
+  end
+
+  # Main deployment lane
+  private_lane :deploy do |options|
+    # Set environment
+    lane_context[SharedValues::ENVIRONMENT] = options[:env]
+    
+    # Run tests for environment
+    run_tests_for_env(options[:env])
+    
+    # Build and deploy
+    build_and_deploy(options[:env], options[:configuration])
+    
+    # Post-deployment tasks
+    post_deployment_tasks(options[:env])
+  end
+
+  desc "Build and upload to TestFlight"
+  lane :beta do
+    # Ensure clean status
+    ensure_git_status_clean
+    
+    # Increment build number
+    increment_build_number(
+      build_number: latest_testflight_build_number + 1
+    )
+    
+    # Update voice interaction version if needed
+    update_voice_version
+    
+    # Build the app
+    build_ios_app(
+      scheme: "EverNear",
+      export_method: "app-store",
+      include_symbols: true,
+      include_bitcode: true
+    )
+    
+    # Upload to TestFlight
+    upload_to_testflight(
+      skip_waiting_for_build_processing: true,
+      changelog: generate_changelog
+    )
+    
+    # Tag the release
+    add_git_tag(
+      tag: "v#{get_version_number}.#{get_build_number}"
+    )
+    
+    # Push the version bump commit and tag
+    push_to_git_remote
+  end
+  
+  desc "Update voice interaction version"
+  private_lane :update_voice_version do
+    version_file = "EverNear/Config/VoiceConfig.swift"
+    
+    # Read current version
+    current_version = sh("grep 'static let version =' #{version_file} | cut -d'\"' -f2").strip
+    
+    # Check if voice files changed
+    voice_files_changed = sh("git diff --name-only HEAD~1 | grep -q 'Voice' && echo 'true' || echo 'false'").strip == 'true'
+    
+    if voice_files_changed
+      # Increment patch version
+      new_version = increment_version_number_in_plist(
+        version_number: current_version,
+        bump_type: "patch"
+      )
+      
+      # Update version in config file
+      sh("sed -i '' 's/version = \"#{current_version}\"/version = \"#{new_version}\"/' #{version_file}")
+      
+      # Commit the change
+      git_commit(
+        path: version_file,
+        message: "Bump voice interaction version to #{new_version} [skip ci]"
+      )
+    end
+  end
+  
+  desc "Generate changelog from git commits"
+  private_lane :generate_changelog do
+    changelog = changelog_from_git_commits(
+      between: [last_git_tag, "HEAD"],
+      pretty: "- %s",
+      date_format: "short",
+      match_lightweight_tag: false,
+      merge_commit_filtering: "exclude_merges"
+    )
+    
+    # Add voice-specific changes if any
+    voice_changes = changelog_from_git_commits(
+      between: [last_git_tag, "HEAD"],
+      pretty: "- %s",
+      date_format: "short",
+      match_lightweight_tag: false,
+      merge_commit_filtering: "exclude_merges",
+      include_pattern: /Voice|Speech|Audio/
+    )
+    
+    if voice_changes.length > 0
+      changelog += "\n\nVoice Interaction Changes:\n#{voice_changes}"
+    end
+    
+    changelog
+  end
+
+  # Environment-specific test suite
+  private_lane :run_tests_for_env do |env|
+    # Basic tests
+    run_tests(
+      scheme: ENVIRONMENTS[env][:scheme],
+      configuration: ENVIRONMENTS[env][:configuration],
+      devices: ["iPhone 14 Pro"],
+      code_coverage: true
+    )
+    
+    # Voice interaction tests
+    test_voice_features(env)
+    
+    # Performance tests for production
+    if env == :prod
+      test_voice_performance
+    end
+  end
+
+  # Build and deploy for environment
+  private_lane :build_and_deploy do |env, configuration|
+    # Prepare certificates
+    sync_certificates(
+      app_identifier: ENVIRONMENTS[env][:app_identifier],
+      type: env == :prod ? "appstore" : "development"
+    )
+    
+    # Build app
+    build_ios_app(
+      scheme: ENVIRONMENTS[env][:scheme],
+      configuration: configuration,
+      export_method: env == :prod ? "app-store" : "development",
+      include_symbols: true,
+      include_bitcode: env == :prod
+    )
+    
+    # Deploy based on environment
+    case env
+    when :dev
+      deploy_to_device
+    when :staging
+      upload_to_testflight(
+        skip_waiting_for_build_processing: true,
+        changelog: generate_changelog(env)
+      )
+    when :prod
+      upload_to_app_store(
+        force: true,
+        skip_screenshots: true,
+        skip_metadata: false,
+        release_notes: generate_changelog(env),
+        phased_release: true
+      )
+    end
+  end
+
+  # Post-deployment tasks
+  private_lane :post_deployment_tasks do |env|
+    case env
+    when :prod
+      # Notify team
+      slack(
+        message: "Successfully deployed #{ENVIRONMENTS[env][:app_identifier]} to production!",
+        success: true,
+        payload: { 'Version' => get_version_number }
+      )
+      
+      # Create release tag
+      add_git_tag(
+        tag: "v#{get_version_number}-#{get_build_number}"
+      )
+      push_to_git_remote
+      
+    when :staging
+      # Notify QA team
+      slack(
+        message: "New build available on TestFlight!",
+        success: true,
+        channel: "#qa-team"
+      )
+      
+    when :dev
+      # Update development documentation
+      update_voice_docs
+    end
+  end
+
+  # Voice-specific test suite
+  private_lane :test_voice_features do |env|
+    # Run voice unit tests
+    run_tests(
+      scheme: ENVIRONMENTS[env][:scheme],
+      only_testing: ["VoiceTests"],
+      devices: ["iPhone 14 Pro"]
+    )
+    
+    # Run voice integration tests
+    sh("swift Scripts/test_voice.swift --env #{env} --mock-audio")
+    
+    # Test voice accessibility
+    test_voice_accessibility
+  end
+
+  # Voice performance testing
+  private_lane :test_voice_performance do
+    # Run performance tests
+    sh("swift Scripts/test_voice_performance.swift")
+    
+    # Check memory usage
+    sh("xcrun xctrace record --template 'Voice Interaction' --output './voice-trace'")
+    
+    # Analyze results
+    sh("swift Scripts/analyze_voice_performance.swift './voice-trace'")
+  end
+
+  # Voice accessibility testing
+  private_lane :test_voice_accessibility do
+    # Run accessibility audit
+    sh("swift Scripts/test_voice_accessibility.swift")
+    
+    # Generate report
+    sh("swift Scripts/generate_accessibility_report.swift")
+  end
+
+  # Set up voice environment
+  private_lane :setup_voice_environment do |env|
+    # Copy environment-specific voice config
+    sh("cp Config/#{ENVIRONMENTS[env][:voice_config]}.swift EverNear/Config/VoiceConfig.swift")
+    
+    # Set up voice data directory
+    sh("mkdir -p \"${HOME}/Library/Application Support/EverNear/VoiceData-#{env}\"")
+    sh("chmod 700 \"${HOME}/Library/Application Support/EverNear/VoiceData-#{env}\"")
+  end
+
+  # Update voice documentation
+  private_lane :update_voice_docs do
+    # Generate latest API documentation
+    sh("swift Scripts/generate_voice_docs.swift")
+    
+    # Update README
+    sh("swift Scripts/update_voice_readme.swift")
+    
+    # Commit changes
+    git_commit(
+      path: ["./Documentation", "./README.md"],
+      message: "Update voice interaction documentation [skip ci]"
+    )
+  end
+end

@@ -1,0 +1,148 @@
+name: EverNear CI/CD
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+env:
+  DEVELOPER_DIR: /Applications/Xcode.app/Contents/Developer
+  GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+  LEOPARD_API_KEY: ${{ secrets.LEOPARD_API_KEY }}
+
+jobs:
+  test:
+    name: Test iOS App
+    runs-on: macos-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Swift
+      uses: swift-actions/setup-swift@v1
+      with:
+        swift-version: "5.5"
+
+    - name: Install dependencies
+      run: |
+        brew install audiokit
+        brew install leopard-speech
+
+    - name: Set up voice test environment
+      run: |
+        mkdir -p "${HOME}/Library/Application Support/EverNear/VoiceData"
+        chmod 700 "${HOME}/Library/Application Support/EverNear/VoiceData"
+        echo "Setting up test environment..."
+        ./Scripts/setup_env.sh ${{ secrets.GEMINI_API_KEY }} ${{ secrets.LEOPARD_API_KEY }}
+
+    - name: Run tests
+      run: |
+        # Unit Tests
+        swift test --enable-test-discovery
+        
+        # Voice Integration Tests (with mock audio)
+        swift Scripts/test_voice.swift --mock-audio
+        
+        # Accessibility Tests
+        swift test --filter "AccessibilityTests"
+
+    - name: Build app
+      run: |
+        xcodebuild clean build \
+          -scheme EverNear \
+          -destination "platform=iOS Simulator,name=iPhone 14 Pro,OS=latest" \
+          CODE_SIGN_IDENTITY="" \
+          CODE_SIGNING_REQUIRED=NO \
+          CODE_SIGNING_ALLOWED=NO
+
+  deploy-testflight:
+    name: Deploy to TestFlight
+    needs: test
+    runs-on: macos-latest
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.0'
+
+    - name: Install Fastlane
+      run: |
+        gem install bundler
+        bundle install
+
+    - name: Set up certificates
+      env:
+        MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
+        FASTLANE_PASSWORD: ${{ secrets.FASTLANE_PASSWORD }}
+        FASTLANE_SESSION: ${{ secrets.FASTLANE_SESSION }}
+      run: bundle exec fastlane sync_certificates
+
+    - name: Deploy to TestFlight
+      env:
+        MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
+        FASTLANE_PASSWORD: ${{ secrets.FASTLANE_PASSWORD }}
+        FASTLANE_SESSION: ${{ secrets.FASTLANE_SESSION }}
+      run: bundle exec fastlane beta
+
+  accessibility-audit:
+    name: Accessibility Audit
+    runs-on: macos-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Run accessibility audit
+      run: |
+        # Check VoiceOver compatibility
+        swift test --filter "VoiceOverTests"
+        
+        # Check voice interaction accessibility
+        swift test --filter "VoiceAccessibilityTests"
+        
+        # Verify voice preferences persistence
+        swift test --filter "VoicePreferencesTests"
+
+    - name: Generate accessibility report
+      run: |
+        echo "Generating accessibility report..."
+        swift Scripts/generate_accessibility_report.swift
+
+    - name: Upload accessibility report
+      uses: actions/upload-artifact@v3
+      with:
+        name: accessibility-report
+        path: reports/accessibility.md
+
+  security-scan:
+    name: Security Scan
+    runs-on: macos-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Run security checks
+      run: |
+        # Check for secure voice data handling
+        swift test --filter "VoiceSecurityTests"
+        
+        # Verify encryption of voice preferences
+        swift test --filter "VoicePreferencesSecurityTests"
+        
+        # Check permission handling
+        swift test --filter "VoicePermissionsTests"
+
+    - name: Generate security report
+      run: |
+        echo "Generating security report..."
+        swift Scripts/generate_security_report.swift
+
+    - name: Upload security report
+      uses: actions/upload-artifact@v3
+      with:
+        name: security-report
+        path: reports/security.md

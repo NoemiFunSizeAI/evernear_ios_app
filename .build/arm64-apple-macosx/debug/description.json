@@ -1,0 +1,768 @@
+{
+  "builtTestProducts" : [
+
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.EverNear-debug.module" : {
+      "executable" : "/Library/Developer/CommandLineTools/usr/bin/swiftc",
+      "fileList" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/sources",
+      "importPath" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/AppDelegate.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Config/AIConfig.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Controllers/AICompanionViewController.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Controllers/AppLockViewController.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Controllers/CompanionViewController.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Controllers/CreateMemoryViewController.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Controllers/HomeViewController.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Controllers/MemoriesViewController.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Controllers/MoreViewController.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Controllers/OnboardingViewController.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Controllers/PrivacySettingsViewController.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Helpers/PrivacyManager.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Helpers/SecurityManager.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Models/AIService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Models/CompanionService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Models/DataManager.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Models/DataModels.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Models/EmotionalAnalysis.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Models/EmotionalResponseAnalyzer.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Models/MemoryResponseGenerator.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Models/MemoryService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Models/MockAIService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/SceneDelegate.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "EverNear",
+      "moduleOutputPath" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.swiftmodule",
+      "objects" : [
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/AppDelegate.swift.o",
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/AIConfig.swift.o",
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/AICompanionViewController.swift.o",
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/AppLockViewController.swift.o",
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/CompanionViewController.swift.o",
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/CreateMemoryViewController.swift.o",
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/HomeViewController.swift.o",
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/MemoriesViewController.swift.o",
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/MoreViewController.swift.o",
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/OnboardingViewController.swift.o",
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/PrivacySettingsViewController.swift.o",
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/PrivacyManager.swift.o",
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/SecurityManager.swift.o",
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/AIService.swift.o",
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/CompanionService.swift.o",
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/DataManager.swift.o",
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/DataModels.swift.o",
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/EmotionalAnalysis.swift.o",
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/EmotionalResponseAnalyzer.swift.o",
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/MemoryResponseGenerator.swift.o",
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/MemoryService.swift.o",
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/MockAIService.swift.o",
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/SceneDelegate.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx12.0",
+        "-swift-version",
+        "5",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j8",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-module-cache-path",
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/EverNear-Swift.h",
+        "-sdk",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g"
+      ],
+      "outputFileMapPath" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/AppDelegate.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/AIConfig.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/AICompanionViewController.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/AppLockViewController.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/CompanionViewController.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/CreateMemoryViewController.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/HomeViewController.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/MemoriesViewController.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/MoreViewController.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/OnboardingViewController.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/PrivacySettingsViewController.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/PrivacyManager.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/SecurityManager.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/AIService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/CompanionService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/DataManager.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/DataModels.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/EmotionalAnalysis.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/EmotionalResponseAnalyzer.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/MemoryResponseGenerator.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/MemoryService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/MockAIService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/SceneDelegate.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.swiftmodule"
+        }
+      ],
+      "sources" : [
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/AppDelegate.swift",
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Config/AIConfig.swift",
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Controllers/AICompanionViewController.swift",
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Controllers/AppLockViewController.swift",
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Controllers/CompanionViewController.swift",
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Controllers/CreateMemoryViewController.swift",
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Controllers/HomeViewController.swift",
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Controllers/MemoriesViewController.swift",
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Controllers/MoreViewController.swift",
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Controllers/OnboardingViewController.swift",
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Controllers/PrivacySettingsViewController.swift",
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Helpers/PrivacyManager.swift",
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Helpers/SecurityManager.swift",
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Models/AIService.swift",
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Models/CompanionService.swift",
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Models/DataManager.swift",
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Models/DataModels.swift",
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Models/EmotionalAnalysis.swift",
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Models/EmotionalResponseAnalyzer.swift",
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Models/MemoryResponseGenerator.swift",
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Models/MemoryService.swift",
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Models/MockAIService.swift",
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/SceneDelegate.swift"
+      ],
+      "tempsPath" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.TestAI-debug.module" : {
+      "executable" : "/Library/Developer/CommandLineTools/usr/bin/swiftc",
+      "fileList" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/TestAI.build/sources",
+      "importPath" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/Scripts/test_mock_ai.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/TestAI.build/sources"
+        }
+      ],
+      "isLibrary" : false,
+      "moduleName" : "TestAI",
+      "moduleOutputPath" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/TestAI.swiftmodule",
+      "objects" : [
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/TestAI.build/test_mock_ai.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx12.0",
+        "-swift-version",
+        "5",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j8",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-module-cache-path",
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-Xfrontend",
+        "-entry-point-function-name",
+        "-Xfrontend",
+        "TestAI_main",
+        "-sdk",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g"
+      ],
+      "outputFileMapPath" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/TestAI.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/TestAI.build/test_mock_ai.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/TestAI.swiftmodule"
+        }
+      ],
+      "sources" : [
+        "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/Scripts/test_mock_ai.swift"
+      ],
+      "tempsPath" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/TestAI.build",
+      "wholeModuleOptimization" : false
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "EverNear" : [
+      "/Library/Developer/CommandLineTools/usr/bin/swiftc",
+      "-module-name",
+      "EverNear",
+      "-incremental",
+      "-c",
+      "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/AppDelegate.swift",
+      "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Config/AIConfig.swift",
+      "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Controllers/AICompanionViewController.swift",
+      "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Controllers/AppLockViewController.swift",
+      "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Controllers/CompanionViewController.swift",
+      "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Controllers/CreateMemoryViewController.swift",
+      "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Controllers/HomeViewController.swift",
+      "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Controllers/MemoriesViewController.swift",
+      "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Controllers/MoreViewController.swift",
+      "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Controllers/OnboardingViewController.swift",
+      "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Controllers/PrivacySettingsViewController.swift",
+      "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Helpers/PrivacyManager.swift",
+      "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Helpers/SecurityManager.swift",
+      "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Models/AIService.swift",
+      "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Models/CompanionService.swift",
+      "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Models/DataManager.swift",
+      "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Models/DataModels.swift",
+      "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Models/EmotionalAnalysis.swift",
+      "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Models/EmotionalResponseAnalyzer.swift",
+      "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Models/MemoryResponseGenerator.swift",
+      "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Models/MemoryService.swift",
+      "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Models/MockAIService.swift",
+      "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/SceneDelegate.swift",
+      "-I",
+      "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug",
+      "-target",
+      "arm64-apple-macosx12.0",
+      "-swift-version",
+      "5",
+      "-enable-batch-mode",
+      "-index-store-path",
+      "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j8",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-module-cache-path",
+      "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/EverNear-Swift.h",
+      "-sdk",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-driver-use-frontend-path",
+      "/Library/Developer/CommandLineTools/usr/bin/swiftc"
+    ],
+    "TestAI" : [
+      "/Library/Developer/CommandLineTools/usr/bin/swiftc",
+      "-module-name",
+      "TestAI",
+      "-incremental",
+      "-c",
+      "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/Scripts/test_mock_ai.swift",
+      "-I",
+      "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug",
+      "-target",
+      "arm64-apple-macosx12.0",
+      "-swift-version",
+      "5",
+      "-enable-batch-mode",
+      "-index-store-path",
+      "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j8",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-module-cache-path",
+      "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-Xfrontend",
+      "-entry-point-function-name",
+      "-Xfrontend",
+      "TestAI_main",
+      "-sdk",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-driver-use-frontend-path",
+      "/Library/Developer/CommandLineTools/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "EverNear" : [
+
+    ],
+    "TestAI" : [
+      "EverNear"
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+
+  },
+  "writeCommands" : {
+    "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/AppDelegate.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Config/AIConfig.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Controllers/AICompanionViewController.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Controllers/AppLockViewController.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Controllers/CompanionViewController.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Controllers/CreateMemoryViewController.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Controllers/HomeViewController.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Controllers/MemoriesViewController.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Controllers/MoreViewController.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Controllers/OnboardingViewController.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Controllers/PrivacySettingsViewController.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Helpers/PrivacyManager.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Helpers/SecurityManager.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Models/AIService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Models/CompanionService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Models/DataManager.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Models/DataModels.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Models/EmotionalAnalysis.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Models/EmotionalResponseAnalyzer.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Models/MemoryResponseGenerator.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Models/MemoryService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/Models/MockAIService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/EverNear/SceneDelegate.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/sources"
+    },
+    "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Library/Developer/CommandLineTools/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+    },
+    "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/TestAI-entitlement.plist" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<entitlement-plist>"
+        },
+        {
+          "kind" : "virtual",
+          "name" : "<com.apple.security.get-task-allow>"
+        }
+      ],
+      "outputFilePath" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/TestAI-entitlement.plist"
+    },
+    "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/TestAI.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/Scripts/test_mock_ai.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/TestAI.build/sources"
+    },
+    "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/TestAI.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/AICompanionViewController.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/AIConfig.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/AIService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/AppDelegate.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/AppLockViewController.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/CompanionService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/CompanionViewController.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/CreateMemoryViewController.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/DataManager.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/DataModels.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/EmotionalAnalysis.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/EmotionalResponseAnalyzer.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/HomeViewController.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/MemoriesViewController.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/MemoryResponseGenerator.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/MemoryService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/MockAIService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/MoreViewController.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/OnboardingViewController.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/PrivacyManager.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/PrivacySettingsViewController.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/SceneDelegate.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/SecurityManager.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/TestAI.build/test_mock_ai.swift.o"
+        }
+      ],
+      "outputFilePath" : "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/TestAI.product/Objects.LinkFileList"
+    }
+  }
+}
