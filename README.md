@@ -64,9 +64,122 @@ EverNear is built using Swift for iOS with a focus on privacy, security, and emo
 - Swift 5.5 or later
 
 ### Installation
+
+#### Prerequisites
+- Xcode 13.0 or later
+- iOS 15.0 or later
+- Swift 5.5 or later
+- CocoaPods (optional, for additional dependencies)
+
+#### Setting up in Xcode
 1. Clone the repository
-2. Open the project in Xcode
-3. Build and run on a simulator or physical device
+2. Create new Xcode project:
+   - Open Xcode
+   - File > New > Project
+   - Choose iOS > App
+   - Set:
+     - Product Name: "EverNear"
+     - Team: Your development team
+     - Organization Identifier: "ai.evernear"
+     - Interface: SwiftUI
+     - Language: Swift
+     - Include Tests: Yes
+
+3. Set up build configurations:
+   - Select project in navigator
+   - Select "EverNear" target
+   - Add "Staging" configuration:
+     - Click "+" under Configurations
+     - Duplicate "Release" configuration
+     - Name it "Staging"
+   - Configure each environment:
+     - Debug → VoiceConfig-Dev.swift
+     - Staging → VoiceConfig-Staging.swift
+     - Release → VoiceConfig-Prod.swift
+
+4. Add dependencies:
+   - File > Add Packages
+   - Add each URL:
+     ```
+     https://github.com/Picovoice/Leopard-iOS
+     https://github.com/AudioKit/AudioKit
+     https://github.com/apple/swift-algorithms
+     ```
+
+5. Create schemes:
+   - Product > Scheme > Manage Schemes
+   - Create three schemes:
+     - EverNear-Debug (Debug configuration)
+     - EverNear-Staging (Staging configuration)
+     - EverNear-Release (Release configuration)
+
+6. Verify Info.plist settings:
+   ```xml
+   <key>NSMicrophoneUsageDescription</key>
+   <string>EverNear needs access to your microphone for voice recording.</string>
+   <key>UILaunchStoryboardName</key>
+   <string>LaunchScreen</string>
+   <key>UIRequiredDeviceCapabilities</key>
+   <array>
+       <string>armv7</string>
+   </array>
+   <key>UISupportedInterfaceOrientations</key>
+   <array>
+       <string>UIInterfaceOrientationPortrait</string>
+   </array>
+   ```
+
+7. Build and run on simulator or device
+
+### Troubleshooting Guide
+
+#### Common Issues
+
+1. **Build Errors**
+   - *Issue*: Missing dependencies
+   - *Solution*: Ensure all SPM packages are properly added and resolved (File > Packages > Reset Package Caches)
+
+2. **Voice Recognition Issues**
+   - *Issue*: Microphone permission denied
+   - *Solution*: Check Info.plist for NSMicrophoneUsageDescription and ensure permission is granted in device settings
+
+3. **Configuration Errors**
+   - *Issue*: Wrong environment configuration
+   - *Solution*: Verify scheme configuration matches intended environment (Debug/Staging/Release)
+
+4. **Memory Management**
+   - *Issue*: App crashes with memory warning
+   - *Solution*: Check VoiceConfig settings for proper memory thresholds
+
+5. **Scheme Selection**
+   - *Issue*: Wrong environment variables
+   - *Solution*: Ensure correct scheme is selected for intended environment
+
+#### Environment-Specific Issues
+
+1. **Debug Environment**
+   - Uses VoiceConfig-Dev.swift
+   - Local model enabled
+   - Debug logging enabled
+   - Memory warnings at 100MB
+
+2. **Staging Environment**
+   - Uses VoiceConfig-Staging.swift
+   - Remote staging API
+   - Limited debug logging
+   - Memory warnings at 150MB
+
+3. **Production Environment**
+   - Uses VoiceConfig-Prod.swift
+   - Production API endpoints
+   - No debug logging
+   - Memory warnings at 200MB
+
+#### Getting Help
+
+1. Check the [Issues](https://github.com/NoemiFunSizeAI/evernear_ios_app/issues) page
+2. Review error logs in Xcode's Console
+3. Contact the development team for support
 
 ## Project Structure
 
