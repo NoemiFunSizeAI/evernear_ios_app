@@ -25,6 +25,10 @@ enum NavigationContext: Equatable {
     case supportGroups
     case supportProfessional
     
+    // Settings contexts
+    case settings
+    case subscription
+    
     // Profile contexts
     case profile(section: ProfileSection?)
     case profileSettings

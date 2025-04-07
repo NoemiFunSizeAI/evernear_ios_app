@@ -12,13 +12,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(windowScene: windowScene)
         
-        // Check if user has completed onboarding
-        //if UserDefaults.standard.bool(forKey: "hasCompletedOnboarding") {
-        //    setupMainInterface()
-        //} else {
-        //    setupOnboardingInterface()
-        //}
-        setupMainInterface()
+        let welcomeVC = WelcomeViewController()
+        let navController = UINavigationController(rootViewController: welcomeVC)
+        window?.rootViewController = navController
         window?.makeKeyAndVisible()
     }
 

@@ -13,7 +13,6 @@ let package = Package(
             targets: ["EverNear"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/Picovoice/Leopard-iOS", from: "2.0.0"),  // Speech-to-text
         .package(url: "https://github.com/AudioKit/AudioKit", from: "5.0.0"),  // Audio processing
         .package(url: "https://github.com/apple/swift-algorithms", from: "1.0.0")  // Signal processing
     ],
@@ -21,8 +20,7 @@ let package = Package(
         .target(
             name: "EverNear",
             dependencies: [
-                "Leopard-iOS",
-                "AudioKit",
+                .product(name: "AudioKit", package: "AudioKit"),
                 .product(name: "Algorithms", package: "swift-algorithms")
             ],
             path: "EverNear"),

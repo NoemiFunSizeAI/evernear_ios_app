@@ -25,7 +25,9 @@
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>EverNear needs access to your photo library to add photos to your memories.</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>EverNear needs access to your microphone to record voice memories.</string>
+	<string>EverNear needs access to your microphone to record voice memories and interact with your AI companion.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>EverNear needs access to speech recognition to understand your voice interactions with the AI companion.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -47,6 +49,12 @@
 	<true/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>EverNear needs access to speech recognition to enable voice interactions with your AI companion.</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>audio</string>
+	</array>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

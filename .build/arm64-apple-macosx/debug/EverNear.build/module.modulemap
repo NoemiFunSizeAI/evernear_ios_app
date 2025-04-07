@@ -1,4 +1,0 @@
-module EverNear {
-    header "/Users/noemireyes/Documents/dev/EverNear/evernear_ios_app/.build/arm64-apple-macosx/debug/EverNear.build/EverNear-Swift.h"
-    requires objc
-}

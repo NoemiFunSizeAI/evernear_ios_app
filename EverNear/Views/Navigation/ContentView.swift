@@ -122,11 +122,15 @@ struct EmotionEntry: Identifiable {
     let timestamp: Date
 }
 
-enum NavigationContext {
-    case home
-    case memories(category: MemoryCategory?)
-    case companion(mode: CompanionMode)
-    case journal(entry: JournalEntry?)
+extension Tab {
+    var defaultContext: NavigationContext {
+        switch self {
+        case .home: return .companion(mode: .chat)
+        case .memories: return .memories(category: nil)
+        case .companion: return .companion(mode: .chat)
+        case .journal: return .journal(entry: nil)
+        case .profile: return .supportNetwork
+        }
     case profile(section: ProfileSection?)
     
     var title: String {
